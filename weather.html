@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/weather.css">
+        <title>Weather App.</title>
+    </head>
+
+    <body>
+        <!-- start nav section -->
+        <nav class="navbar navbar-expand-lg py-4">
+            <div class="container p-0">
+                <div class="left d-flex justify-content-center align-items-center">
+                    <img src="img/logo.png" alt class="logo me-2">
+                    <a href="#" class="ps-1">
+                        <p class="text-white mb-0 fw-bold fs-5">Weather</p>
+                        <small class="text-muted">tagline goes here</small>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="right collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-fill justify-content-end">
+                        <li class="nav-item m-2">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link text-white" href="#">News</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link text-white" href="#">Live Cameras</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link text-white" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end nav section -->
+
+        <!-- start search section -->
+        <section class="py-1 position-relative">
+            <div class="container">
+                <form class="input-group mb-3 position-absolute search w-75">
+                    <input type="text" class="inpt form-control text-white bg-dark p-3 border-0 rounded-pill"
+                        placeholder="Find your location..." aria-label="Recipient's username" aria-describedby="search">
+                    <button class="input-group-text border-0 rounded" id="search">Find</button>
+                </form>
+                <div class="table w-75 position-absolute d-flex">
+                    <div class="today w-100">
+                        <div class="top p-2 d-flex justify-content-between rounded">
+                            <span class="dayNow text-muted"></span>
+                            <span class="d-inline-block">
+                                <span class="dateNumNow text-muted"></span>
+                                <span class="dateMonthNow text-muted"></span>
+                            </span>
+                        </div>
+                        <div class="mid px-2 pb-4 pt-3 rounded">
+                            <p class="city mb-0 fs-2 fw-bold"></p>
+                            <div class="degree px-4 py-3 d-flex align-items-center justify-content-evenly">
+                                <div class="fw-bold text-white fs-1 d-flex">
+                                    <span class="maxNow"></span>
+                                    <span>
+                                        <sup>o</sup>C
+                                    </span>
+                                </div>
+                                <div class="">
+                                    <img class="iconNow" alt="">
+                                </div>
+                            </div>
+                            <div class="note pb-5 pt-0 text-center">
+                                <span class="noteContNow text-info"></span>
+                            </div>
+                            <div class="moreNote px-0">
+                                <span>
+                                    <img src="img/icon-umberella.png" alt="">
+                                    <span>
+                                        <span class="wind_mphNow"></span><span>%</span>
+                                    </span>
+                                </span>
+                                <span class="px-2 ">
+                                    <img class="" src="img/icon-wind.png" alt="">
+                                    <span>
+                                        <span class="wind_kph"></span><span>km/h</span>
+                                    </span>
+                                </span>
+                                <span>
+                                    <img src="img/icon-compass.png" alt="">
+                                    <span class="wind_degree"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tomorrow text-center w-100">
+                        <div class="top p-2 d-flex justify-content-center rounded">
+                            <span class="dayTomo text-muted"></span>
+                        </div>
+                        <div class="mid px-2 pt-5 pb-4 rounded">
+                            <div>
+                                <img class="iconTomo" alt="">
+                            </div>
+                            <div class="fw-bold text-white fs-4 pb-0 d-flex justify-content-center align-items-center">
+                                <div class="maxTomo "></div>
+                                <div> &#x2103;</div>
+                            </div>
+                            <div class="text-muted d-flex justify-content-center align-items-center">
+                                <div class="minTomo"></div>
+                                <div> &#x2103;</div>
+                            </div>
+                            <div class="note pb-5">
+                                <span class="noteContTomo text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="afterTomorrow text-center w-100">
+                        <div class="top p-2 d-flex justify-content-center rounded">
+                            <span class="dayAftr text-muted"></span>
+                        </div>
+                        <div class="mid px-2 px-2 pt-5 pb-4 rounded">
+                            <div>
+                                <img class="iconAftr" alt="">
+                            </div>
+                            <div class="fw-bold text-white fs-4 pb-0 d-flex justify-content-center align-items-center">
+                                <div class="maxAftr "></div>
+                                <div> &#x2103;</div>
+                            </div>
+                            <div class="text-muted d-flex justify-content-center align-items-center">
+                                <div class="minAfter"></div>
+                                <div> &#x2103;</div>
+                            </div>
+                            <div class="note pb-5">
+                                <span class="noteContAftr text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end search section -->
+
+        <div style="background-color: #1e202b; width: 100%; height: 20rem;"></div>
+
+        <!-- start footer -->
+        <footer class="py-5 px-3">
+            <div class="container">
+                <div class="d-flex justify-content-between align-content-center">
+                    <form class="input-group mb-3 search w-75">
+                        <input type="text" class="form-control text-white bg-dark p-3 border-0 rounded-pill"
+                            placeholder="Enter your email to subscribe..." aria-label="Recipient's username"
+                            aria-describedby="subscribe">
+                        <span class="input-group-text border-0 rounded" id="subscribe">subscribe</span>
+                    </form>
+                    <div class="contact d-flex justify-content-center align-items-center">
+                        <a href="#" class="px-3 py-1 mx-1 bg-dark rounded-circle">
+                            <i class="fab fa-facebook-f fs-5 text-center"></i>
+                        </a>
+                        <a href="#" class="px-3 py-1 mx-1 bg-dark rounded-circle">
+                            <i class="fab fa-twitter fs-5 text-center"></i>
+                        </a>
+                        <a href="#" class="px-3 py-1 mx-1 bg-dark rounded-circle">
+                            <i class="fa fa-google-plus fs-5 text-center"></i>
+                        </a>
+                        <a href="#" class="px-3 py-1 mx-1 bg-dark rounded-circle">
+                            <i class="fa fa-pinterest fs-5 text-center"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-muted">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+
+        <script src="js/all.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+
+</html>

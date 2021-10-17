@@ -1,0 +1,73 @@
+:root{
+    --main-color: #009ad8;
+}
+a{text-decoration: none;}
+ul{list-style: none;}
+nav{background-color: #1e202b;}
+.navbar-toggler:focus {box-shadow: none !important;}
+.navbar-toggler:hover > svg{color: var(--main-color) !important;}
+nav .right .active{
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 5px 25px;
+    border-radius: 30px;
+}
+nav .right li a{
+    display: inline-block;
+    padding: 5px 18px !important;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s ease;
+}
+nav .right li a:hover{
+    outline: none;
+    color: var(--main-color) !important;
+    border: 2px solid var(--main-color);
+}
+section{
+    position: relative;
+    background-image: url(../img/banner.png);
+    min-height: 350px;
+    background-size: cover;
+}
+section .search{transform: translate(15%, 100%);}
+section #search,
+footer #subscribe{
+    background-color: var(--main-color);
+    color: #fff;
+    transform: translatex(-110%);
+    padding: 5px 25px;
+    border-radius: 50rem !important;
+    margin: 5px 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.form-control:focus{box-shadow: none !important;}
+.table{
+    margin-top: 10px;
+    transform: translate(10%, 15%);
+    top: 30%;
+}
+.table .today .top,
+.table .afterTomorrow .top{
+    background-color: #2d303d;
+}
+.table .tomorrow .top{
+    background-color: #262939;
+}
+.table .top span{color: rgb(194, 194, 194) !important}
+.table .today .mid,
+.table .afterTomorrow .mid{
+    background-color:  #323544;
+    color: rgb(194, 194, 194) !important
+}
+.table .tomorrow .mid{background-color: #242631;}
+.table .today .mid .num{
+    font-size: 4.5rem;
+}
+footer{
+    background-color: #262936 !important;
+}
+footer .contact a:hover{background-color: var(--main-color) !important;}
+footer .contact a:hover svg {color: #fff;}
